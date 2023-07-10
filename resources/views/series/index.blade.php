@@ -1,5 +1,5 @@
 <x-series.layout title="Series">
-     <x-series.title title="Series"/>
+    <x-series.title title="Series"/>
 
     <div class="d-flex justify-content-end align-items-end my-3">
         <a href="{{route('series.create')}}" class="btn btn-success btn-sm">+</a>
@@ -15,6 +15,8 @@
         @foreach($series AS $serie)
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 {{$serie->name}}
+                <a href="{{route('seasons.index', $serie->id)}}"
+                   class="text-decoration-none text-muted"><span class="d-inline-block bg-success rounded-circle p-1"></span> Seasons</a>
 
                 <span class="d-flex">
                     <a href="{{route('series.edit', $serie->id)}}" class="btn btn-primary btn-sm">Editar</a>
