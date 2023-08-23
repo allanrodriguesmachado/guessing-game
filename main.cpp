@@ -5,14 +5,13 @@
 
 using namespace std;
 
-bool test(bool verify) {
-    const int NUMBER_SECRET = rand();
+bool validateGame(bool verify) {
+    const int NUMBER_SECRET = 51;
     double result = 1000.0;
 
     while (verify) {
-        int kickNumber = 0;
-
-        cout << "Digite um numero: " << kickNumber << endl;
+        int kickNumber;
+        cout << "Digite um numero: " << endl;
         cin >> kickNumber;
 
         double perda = abs(kickNumber - NUMBER_SECRET) / 2.0;
@@ -34,6 +33,7 @@ bool test(bool verify) {
         cout << "Pontuacao atual " << result << endl;
     }
 
+    return true;
 }
 
 int main() {
@@ -43,7 +43,7 @@ int main() {
 
     bool verify = true;
 
-    test(verify);
+    validateGame(verify);
 
     return 0;
 }
