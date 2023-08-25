@@ -63,20 +63,20 @@ void gameValidation() {
         cout << fixed;
 
         if (kickNumber > 100) {
-            cout << "Ops! Numero muito! Tente novamente" << endl;
+            cout << "Ops! O número é muito alto! Por favor, tente novamente." << endl;
         }
 
         if (kickNumber == secretNumber()) {
-            cout << "Parabens" << endl;
+            cout << "Parabéns! Você acertou o número." << endl;
             break;
         }
 
         if (kickNumber < secretNumber()) {
-            cout << "Nao foi dessa vez, Tentar novamente valor menor" << endl;
+            cout << "Não foi dessa vez. Tente novamente com um valor maior." << endl;
         }
 
         if (kickNumber > secretNumber()) {
-            cout << "Nao foi dessa vez, Tentar novamente  valor maior" << endl;
+            cout << "Não foi dessa vez. Tente novamente com um valor menor." << endl;
         }
     }
 }
@@ -91,4 +91,3 @@ int main() {
 
     return 0;
 }
-
