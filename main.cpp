@@ -16,7 +16,6 @@ void header() {
     cout << "Facil: F, Medio: M ou Dificil: D" << endl;
 }
 
-
 void footer() {
     cout << "******************************************" << endl;
     cout << "Nao foi dessa vez " << endl;
